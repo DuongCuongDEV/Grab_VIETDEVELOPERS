@@ -56,6 +56,5 @@ class ViewController: UIViewController, SearchViewControllerDelegate {
         mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
     }
     
-    
 }
 
