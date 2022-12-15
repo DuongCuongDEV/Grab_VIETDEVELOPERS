@@ -105,4 +105,5 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         print(coordinate)
         delegate?.searchViewController(self, didSelectLocationWith: coordinate)
     }
+//    func print("asdhak")
 }
