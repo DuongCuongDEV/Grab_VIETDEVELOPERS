@@ -105,7 +105,9 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
         
         print("location2222 \(locValue)")
         
-        print("location222233333 \(locValue)")
+//        print("location222233333 \(locValue)")
+//        print("location222233333 \(locValue)")        print("location222233333 \(locValue)")        print("location222233333 \(locValue)")
+//        print("location222233333 \(locValue)")        print("location222233333 \(locValue)")
     }
     
     
