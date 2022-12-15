@@ -102,7 +102,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         tableView.deselectRow(at: indexPath, animated: true)
         
         let coordinate = locations[indexPath.row].coordinates
-        
+        print(coordinate)
         delegate?.searchViewController(self, didSelectLocationWith: coordinate)
     }
 //    func print("asdhak")
