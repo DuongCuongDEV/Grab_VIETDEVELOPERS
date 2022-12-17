@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  EndDestination.swift
 //  GRAB_K16
 //
-//  Created by Dương Văn Cường on 08/12/2022.
+//  Created by Dương Văn Cường on 16/12/2022.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import MapKit
 import FloatingPanel
 import CoreLocation
 
-class ViewController: UIViewController, SearchViewControllerDelegate, CLLocationManagerDelegate {
+class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewControllerDelegate {
 
     let mapView = MKMapView()
     let panel = FloatingPanelController()
@@ -23,7 +23,7 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Chọn điểm đón"
+        title = "Chọn điểm đến"
         // Do any additional setup after loading the view.
         
         view.addSubview(mapView)
@@ -34,6 +34,8 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
         panel.set(contentViewController: searchVC)
         panel.addPanel(toParent: self)
         
+       
+       
         // Ask for Authorisation from the User.
         self.manager.requestAlwaysAuthorization()
 
@@ -45,7 +47,27 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
             manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             manager.startUpdatingLocation()
         }
+        
+        
+        
+        
+        
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {return}
+        
+        
+        panel.move(to: .tip, animated: true)
+
+//        mapView.removeAnnotations(mapView.annotations)
+
        
+        let pin = MKPointAnnotation()
+ 
+        pin.coordinate = locValue
+        mapView.addAnnotation(pin)
+
+        mapView.setRegion(MKCoordinateRegion(center: locValue, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
+        
+        print("location2222 \(locValue)")
         
     }
     
@@ -67,15 +89,17 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
     
     func searchViewController(_ vc: SearchViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
 
+        
+        
         guard let coordinates = coordinates else {
             return
         }
 
         panel.move(to: .tip, animated: true)
-        mapView.removeAnnotations(mapView.annotations)
+//        mapView.removeAnnotations(mapView.annotations)
 
         let pin = MKPointAnnotation()
- 
+
         pin.coordinate = coordinates
         mapView.addAnnotation(pin)
 
@@ -83,31 +107,5 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
     }
     
     
-    
 
-    @IBAction func userLocation(_ sender: UIButton) {
-    
-        
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {return}
-        
-        
-        panel.move(to: .tip, animated: true)
-
-        mapView.removeAnnotations(mapView.annotations)
-
-       
-        let pin = MKPointAnnotation()
- 
-        pin.coordinate = locValue
-        mapView.addAnnotation(pin)
-
-        mapView.setRegion(MKCoordinateRegion(center: locValue, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
-        
-        print("location2222 \(locValue)")
-        
-
-    }
-    
-    
 }
-
