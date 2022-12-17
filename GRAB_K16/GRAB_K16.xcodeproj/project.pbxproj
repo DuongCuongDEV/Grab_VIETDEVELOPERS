@@ -15,7 +15,12 @@
 		4323B7C62941013C005B8FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4323B7C42941013C005B8FBF /* LaunchScreen.storyboard */; };
 		4397A6CD294749DE009A722C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397A6CC294749DE009A722C /* LocationManager.swift */; };
 		4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397A6CE29474A16009A722C /* SearchViewController.swift */; };
-		B0DDB861E1546EA3B2EB443B /* Pods_GRAB_K16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */; };
+		E562FF43294E0BC8005BD587 /* tripsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562FF42294E0BC8005BD587 /* tripsModel.swift */; };
+		E562FF45294E0D02005BD587 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562FF44294E0D02005BD587 /* TripsViewController.swift */; };
+		E562FF48294E0DE2005BD587 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E562FF47294E0DE2005BD587 /* Alamofire */; };
+		E562FF4B294E0DF6005BD587 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E562FF4A294E0DF6005BD587 /* Kingfisher */; };
+		E562FF4E294E0E31005BD587 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562FF4C294E0E31005BD587 /* TripsTableViewCell.swift */; };
+		E562FF4F294E0E31005BD587 /* TripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E562FF4D294E0E31005BD587 /* TripsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +34,10 @@
 		4323B7C72941013C005B8FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4397A6CC294749DE009A722C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4397A6CE29474A16009A722C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.release.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.release.xcconfig"; sourceTree = "<group>"; };
-		82139CD650CE053DC97B5058 /* Pods-GRAB_K16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.debug.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.debug.xcconfig"; sourceTree = "<group>"; };
-		CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRAB_K16.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E562FF42294E0BC8005BD587 /* tripsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripsModel.swift; sourceTree = "<group>"; };
+		E562FF44294E0D02005BD587 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		E562FF4C294E0E31005BD587 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		E562FF4D294E0E31005BD587 /* TripsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,28 +45,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0DDB861E1546EA3B2EB443B /* Pods_GRAB_K16.framework in Frameworks */,
+				E562FF4B294E0DF6005BD587 /* Kingfisher in Frameworks */,
+				E562FF48294E0DE2005BD587 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		104BCE944F932BC6BA1DCD26 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4323B7AD2941013A005B8FBF = {
 			isa = PBXGroup;
 			children = (
 				4323B7B82941013A005B8FBF /* GRAB_K16 */,
 				4323B7B72941013A005B8FBF /* Products */,
-				D687CBD5D91A8D6905852E88 /* Pods */,
-				104BCE944F932BC6BA1DCD26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +100,7 @@
 			children = (
 				4323B7BD2941013A005B8FBF /* ViewController.swift */,
 				4397A6CE29474A16009A722C /* SearchViewController.swift */,
+				E562FF44294E0D02005BD587 /* TripsViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -110,6 +108,7 @@
 		4323B7D229410310005B8FBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E562FF42294E0BC8005BD587 /* tripsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +123,8 @@
 		4323B7D629410428005B8FBF /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				E562FF4C294E0E31005BD587 /* TripsTableViewCell.swift */,
+				E562FF4D294E0E31005BD587 /* TripsTableViewCell.xib */,
 			);
 			path = UITableViewCells;
 			sourceTree = "<group>";
@@ -160,15 +161,6 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		D687CBD5D91A8D6905852E88 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				82139CD650CE053DC97B5058 /* Pods-GRAB_K16.debug.xcconfig */,
-				63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +179,10 @@
 			dependencies = (
 			);
 			name = GRAB_K16;
+			packageProductDependencies = (
+				E562FF47294E0DE2005BD587 /* Alamofire */,
+				E562FF4A294E0DF6005BD587 /* Kingfisher */,
+			);
 			productName = GRAB_K16;
 			productReference = 4323B7B62941013A005B8FBF /* GRAB_K16.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +211,10 @@
 				Base,
 			);
 			mainGroup = 4323B7AD2941013A005B8FBF;
+			packageReferences = (
+				E562FF46294E0DE2005BD587 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E562FF49294E0DF6005BD587 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 4323B7B72941013A005B8FBF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E562FF4F294E0E31005BD587 /* TripsTableViewCell.xib in Resources */,
 				4323B7C62941013C005B8FBF /* LaunchScreen.storyboard in Resources */,
 				4323B7C32941013C005B8FBF /* Assets.xcassets in Resources */,
 				4323B7C12941013A005B8FBF /* Main.storyboard in Resources */,
@@ -284,6 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E562FF4E294E0E31005BD587 /* TripsTableViewCell.swift in Sources */,
+				E562FF45294E0D02005BD587 /* TripsViewController.swift in Sources */,
+				E562FF43294E0BC8005BD587 /* tripsModel.swift in Sources */,
 				4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */,
 				4397A6CD294749DE009A722C /* LocationManager.swift in Sources */,
 				4323B7BE2941013A005B8FBF /* ViewController.swift in Sources */,
@@ -430,7 +434,6 @@
 		};
 		4323B7CB2941013C005B8FBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82139CD650CE053DC97B5058 /* Pods-GRAB_K16.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,7 +461,6 @@
 		};
 		4323B7CC2941013C005B8FBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -506,6 +508,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E562FF46294E0DE2005BD587 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		E562FF49294E0DF6005BD587 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E562FF47294E0DE2005BD587 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E562FF46294E0DE2005BD587 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		E562FF4A294E0DF6005BD587 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E562FF49294E0DF6005BD587 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4323B7AE2941013A005B8FBF /* Project object */;
 }
