@@ -13,13 +13,18 @@
 		4323B7C12941013A005B8FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4323B7BF2941013A005B8FBF /* Main.storyboard */; };
 		4323B7C32941013C005B8FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4323B7C22941013C005B8FBF /* Assets.xcassets */; };
 		4323B7C62941013C005B8FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4323B7C42941013C005B8FBF /* LaunchScreen.storyboard */; };
-		9B5741782947870B00D943A2 /* DanhSachXeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5741762947870B00D943A2 /* DanhSachXeTableViewCell.swift */; };
-		9B5741792947870B00D943A2 /* DanhSachXeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5741772947870B00D943A2 /* DanhSachXeTableViewCell.xib */; };
-		9B57417B294A054A00D943A2 /* bookCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57417A294A054A00D943A2 /* bookCartModel.swift */; };
-		9B57417E294A057100D943A2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9B57417D294A057100D943A2 /* Alamofire */; };
-		9B574180294A077500D943A2 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57417F294A077500D943A2 /* APIHandler.swift */; };
-		9B574183294A1CBA00D943A2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9B574182294A1CBA00D943A2 /* Kingfisher */; };
-		9B574187294A366C00D943A2 /* DanhSachBookCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B574186294A366C00D943A2 /* DanhSachBookCarView.swift */; };
+		4397A6CD294749DE009A722C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397A6CC294749DE009A722C /* LocationManager.swift */; };
+		4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397A6CE29474A16009A722C /* SearchViewController.swift */; };
+		4397A6D3294C9207009A722C /* EndDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397A6D2294C9207009A722C /* EndDestination.swift */; };
+		61F26AC3294E24DC00B11A08 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AC2294E24DC00B11A08 /* MapViewController.swift */; };
+		61F26AC5294E24E100B11A08 /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AC4294E24E100B11A08 /* TrafficViewController.swift */; };
+		61F26AC7294E24E800B11A08 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AC6294E24E800B11A08 /* CustomTableViewCell.swift */; };
+		61F26AC9294E303D00B11A08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AC8294E303D00B11A08 /* HomeViewController.swift */; };
+		61F26ACC294E306D00B11A08 /* ImageSlideshow in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26ACB294E306D00B11A08 /* ImageSlideshow */; };
+		61F26ACE294E306D00B11A08 /* ImageSlideshow/Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26ACD294E306D00B11A08 /* ImageSlideshow/Alamofire */; };
+		61F26AD0294E306D00B11A08 /* ImageSlideshow/Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26ACF294E306D00B11A08 /* ImageSlideshow/Kingfisher */; };
+		61F26AD2294E306D00B11A08 /* ImageSlideshow/SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26AD1294E306D00B11A08 /* ImageSlideshow/SDWebImage */; };
+		B0DDB861E1546EA3B2EB443B /* Pods_GRAB_K16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +36,16 @@
 		4323B7C22941013C005B8FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4323B7C52941013C005B8FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4323B7C72941013C005B8FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B5741762947870B00D943A2 /* DanhSachXeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhSachXeTableViewCell.swift; sourceTree = "<group>"; };
-		9B5741772947870B00D943A2 /* DanhSachXeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DanhSachXeTableViewCell.xib; sourceTree = "<group>"; };
-		9B57417A294A054A00D943A2 /* bookCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookCartModel.swift; sourceTree = "<group>"; };
-		9B57417F294A077500D943A2 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		9B574186294A366C00D943A2 /* DanhSachBookCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhSachBookCarView.swift; sourceTree = "<group>"; };
+		4397A6CC294749DE009A722C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4397A6CE29474A16009A722C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4397A6D2294C9207009A722C /* EndDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndDestination.swift; sourceTree = "<group>"; };
+		61F26AC2294E24DC00B11A08 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "../../../../Swift/Grab-VietDevlopersK16/Grab-VietDevlopersK16/MapViewController.swift"; sourceTree = "<group>"; };
+		61F26AC4294E24E100B11A08 /* TrafficViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrafficViewController.swift; path = "../../../../Swift/Grab-VietDevlopersK16/Grab-VietDevlopersK16/TrafficViewController.swift"; sourceTree = "<group>"; };
+		61F26AC6294E24E800B11A08 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = "../../../../Swift/Grab-VietDevlopersK16/Grab-VietDevlopersK16/CustomTableViewCell.swift"; sourceTree = "<group>"; };
+		61F26AC8294E303D00B11A08 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../../Swift/Grab-VietDevlopersK16/Grab-VietDevlopersK16/HomeViewController.swift"; sourceTree = "<group>"; };
+		63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.release.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.release.xcconfig"; sourceTree = "<group>"; };
+		82139CD650CE053DC97B5058 /* Pods-GRAB_K16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.debug.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.debug.xcconfig"; sourceTree = "<group>"; };
+		CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRAB_K16.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,19 +53,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B574183294A1CBA00D943A2 /* Kingfisher in Frameworks */,
-				9B57417E294A057100D943A2 /* Alamofire in Frameworks */,
+				61F26AD2294E306D00B11A08 /* ImageSlideshow/SDWebImage in Frameworks */,
+				B0DDB861E1546EA3B2EB443B /* Pods_GRAB_K16.framework in Frameworks */,
+				61F26ACE294E306D00B11A08 /* ImageSlideshow/Alamofire in Frameworks */,
+				61F26ACC294E306D00B11A08 /* ImageSlideshow in Frameworks */,
+				61F26AD0294E306D00B11A08 /* ImageSlideshow/Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104BCE944F932BC6BA1DCD26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4323B7AD2941013A005B8FBF = {
 			isa = PBXGroup;
 			children = (
 				4323B7B82941013A005B8FBF /* GRAB_K16 */,
 				4323B7B72941013A005B8FBF /* Products */,
+				D687CBD5D91A8D6905852E88 /* Pods */,
+				104BCE944F932BC6BA1DCD26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,15 +93,13 @@
 		4323B7B82941013A005B8FBF /* GRAB_K16 */ = {
 			isa = PBXGroup;
 			children = (
+				4323B7D129410307005B8FBF /* Controler */,
 				4323B7D8294104C5005B8FBF /* Services */,
 				4323B7D7294104A1005B8FBF /* Common */,
 				4323B7D229410310005B8FBF /* Model */,
-				4323B7D129410307005B8FBF /* Controler */,
 				4323B7D0294102FE005B8FBF /* View */,
 				4323B7B92941013A005B8FBF /* AppDelegate.swift */,
 				4323B7BB2941013A005B8FBF /* SceneDelegate.swift */,
-				4323B7BF2941013A005B8FBF /* Main.storyboard */,
-				4323B7C22941013C005B8FBF /* Assets.xcassets */,
 				4323B7C42941013C005B8FBF /* LaunchScreen.storyboard */,
 				4323B7C72941013C005B8FBF /* Info.plist */,
 			);
@@ -88,10 +109,9 @@
 		4323B7D0294102FE005B8FBF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4323B7BD2941013A005B8FBF /* ViewController.swift */,
+				4323B7BF2941013A005B8FBF /* Main.storyboard */,
 				4323B7D629410428005B8FBF /* UITableViewCells */,
 				4323B7D529410410005B8FBF /* UICollectionViewCells */,
-				9B574186294A366C00D943A2 /* DanhSachBookCarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +119,13 @@
 		4323B7D129410307005B8FBF /* Controler */ = {
 			isa = PBXGroup;
 			children = (
+				61F26AC8294E303D00B11A08 /* HomeViewController.swift */,
+				61F26AC6294E24E800B11A08 /* CustomTableViewCell.swift */,
+				61F26AC4294E24E100B11A08 /* TrafficViewController.swift */,
+				61F26AC2294E24DC00B11A08 /* MapViewController.swift */,
+				4323B7BD2941013A005B8FBF /* ViewController.swift */,
+				4397A6CE29474A16009A722C /* SearchViewController.swift */,
+				4397A6D2294C9207009A722C /* EndDestination.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -106,7 +133,6 @@
 		4323B7D229410310005B8FBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9B57417A294A054A00D943A2 /* bookCartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,8 +147,6 @@
 		4323B7D629410428005B8FBF /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				9B5741762947870B00D943A2 /* DanhSachXeTableViewCell.swift */,
-				9B5741772947870B00D943A2 /* DanhSachXeTableViewCell.xib */,
 			);
 			path = UITableViewCells;
 			sourceTree = "<group>";
@@ -130,6 +154,8 @@
 		4323B7D7294104A1005B8FBF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4323B7C22941013C005B8FBF /* Assets.xcassets */,
+				4397A6CC294749DE009A722C /* LocationManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -153,9 +179,17 @@
 		4323B7DA2941050C005B8FBF /* API */ = {
 			isa = PBXGroup;
 			children = (
-				9B57417F294A077500D943A2 /* APIHandler.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		D687CBD5D91A8D6905852E88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82139CD650CE053DC97B5058 /* Pods-GRAB_K16.debug.xcconfig */,
+				63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4323B7CA2941013C005B8FBF /* Build configuration list for PBXNativeTarget "GRAB_K16" */;
 			buildPhases = (
+				C5A67A0000FE91E8B9A03201 /* [CP] Check Pods Manifest.lock */,
 				4323B7B22941013A005B8FBF /* Sources */,
 				4323B7B32941013A005B8FBF /* Frameworks */,
 				4323B7B42941013A005B8FBF /* Resources */,
+				18CED9A6522CF1B0A4CAEE59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,8 +211,10 @@
 			);
 			name = GRAB_K16;
 			packageProductDependencies = (
-				9B57417D294A057100D943A2 /* Alamofire */,
-				9B574182294A1CBA00D943A2 /* Kingfisher */,
+				61F26ACB294E306D00B11A08 /* ImageSlideshow */,
+				61F26ACD294E306D00B11A08 /* ImageSlideshow/Alamofire */,
+				61F26ACF294E306D00B11A08 /* ImageSlideshow/Kingfisher */,
+				61F26AD1294E306D00B11A08 /* ImageSlideshow/SDWebImage */,
 			);
 			productName = GRAB_K16;
 			productReference = 4323B7B62941013A005B8FBF /* GRAB_K16.app */;
@@ -207,8 +245,7 @@
 			);
 			mainGroup = 4323B7AD2941013A005B8FBF;
 			packageReferences = (
-				9B57417C294A057100D943A2 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				9B574181294A1CBA00D943A2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				61F26ACA294E306D00B11A08 /* XCRemoteSwiftPackageReference "ImageSlideshow" */,
 			);
 			productRefGroup = 4323B7B72941013A005B8FBF /* Products */;
 			projectDirPath = "";
@@ -226,25 +263,69 @@
 			files = (
 				4323B7C62941013C005B8FBF /* LaunchScreen.storyboard in Resources */,
 				4323B7C32941013C005B8FBF /* Assets.xcassets in Resources */,
-				9B5741792947870B00D943A2 /* DanhSachXeTableViewCell.xib in Resources */,
 				4323B7C12941013A005B8FBF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18CED9A6522CF1B0A4CAEE59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5A67A0000FE91E8B9A03201 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GRAB_K16-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4323B7B22941013A005B8FBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61F26AC7294E24E800B11A08 /* CustomTableViewCell.swift in Sources */,
+				4397A6D3294C9207009A722C /* EndDestination.swift in Sources */,
+				4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */,
+				4397A6CD294749DE009A722C /* LocationManager.swift in Sources */,
 				4323B7BE2941013A005B8FBF /* ViewController.swift in Sources */,
-				9B57417B294A054A00D943A2 /* bookCartModel.swift in Sources */,
+				61F26AC9294E303D00B11A08 /* HomeViewController.swift in Sources */,
+				61F26AC5294E24E100B11A08 /* TrafficViewController.swift in Sources */,
 				4323B7BA2941013A005B8FBF /* AppDelegate.swift in Sources */,
-				9B574180294A077500D943A2 /* APIHandler.swift in Sources */,
-				9B574187294A366C00D943A2 /* DanhSachBookCarView.swift in Sources */,
-				9B5741782947870B00D943A2 /* DanhSachXeTableViewCell.swift in Sources */,
 				4323B7BC2941013A005B8FBF /* SceneDelegate.swift in Sources */,
+				61F26AC3294E24DC00B11A08 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +467,7 @@
 		};
 		4323B7CB2941013C005B8FBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82139CD650CE053DC97B5058 /* Pods-GRAB_K16.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -413,6 +495,7 @@
 		};
 		4323B7CC2941013C005B8FBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,17 +545,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9B57417C294A057100D943A2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		61F26ACA294E306D00B11A08 /* XCRemoteSwiftPackageReference "ImageSlideshow" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		9B574181294A1CBA00D943A2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			repositoryURL = "https://github.com/zvonicek/ImageSlideshow.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -481,15 +556,25 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9B57417D294A057100D943A2 /* Alamofire */ = {
+		61F26ACB294E306D00B11A08 /* ImageSlideshow */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9B57417C294A057100D943A2 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = 61F26ACA294E306D00B11A08 /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow;
 		};
-		9B574182294A1CBA00D943A2 /* Kingfisher */ = {
+		61F26ACD294E306D00B11A08 /* ImageSlideshow/Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9B574181294A1CBA00D943A2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
+			package = 61F26ACA294E306D00B11A08 /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow/Alamofire;
+		};
+		61F26ACF294E306D00B11A08 /* ImageSlideshow/Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61F26ACA294E306D00B11A08 /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow/Kingfisher;
+		};
+		61F26AD1294E306D00B11A08 /* ImageSlideshow/SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61F26ACA294E306D00B11A08 /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow/SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
