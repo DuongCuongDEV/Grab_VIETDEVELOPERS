@@ -15,7 +15,7 @@
 		4323B7C62941013C005B8FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4323B7C42941013C005B8FBF /* LaunchScreen.storyboard */; };
 		4397A6CD294749DE009A722C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397A6CC294749DE009A722C /* LocationManager.swift */; };
 		4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397A6CE29474A16009A722C /* SearchViewController.swift */; };
-		6134DA14294B8BD8007E226B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134DA13294B8BD8007E226B /* HomeViewController.swift */; };
+		4397A6D3294C9207009A722C /* EndDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397A6D2294C9207009A722C /* EndDestination.swift */; };
 		B0DDB861E1546EA3B2EB443B /* Pods_GRAB_K16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		4323B7C72941013C005B8FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4397A6CC294749DE009A722C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4397A6CE29474A16009A722C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		6134DA13294B8BD8007E226B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4397A6D2294C9207009A722C /* EndDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndDestination.swift; sourceTree = "<group>"; };
 		63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.release.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.release.xcconfig"; sourceTree = "<group>"; };
 		82139CD650CE053DC97B5058 /* Pods-GRAB_K16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.debug.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRAB_K16.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,10 +77,10 @@
 		4323B7B82941013A005B8FBF /* GRAB_K16 */ = {
 			isa = PBXGroup;
 			children = (
+				4323B7D129410307005B8FBF /* Controler */,
 				4323B7D8294104C5005B8FBF /* Services */,
 				4323B7D7294104A1005B8FBF /* Common */,
 				4323B7D229410310005B8FBF /* Model */,
-				4323B7D129410307005B8FBF /* Controler */,
 				4323B7D0294102FE005B8FBF /* View */,
 				4323B7B92941013A005B8FBF /* AppDelegate.swift */,
 				4323B7BB2941013A005B8FBF /* SceneDelegate.swift */,
@@ -105,7 +105,7 @@
 			children = (
 				4323B7BD2941013A005B8FBF /* ViewController.swift */,
 				4397A6CE29474A16009A722C /* SearchViewController.swift */,
-				6134DA13294B8BD8007E226B /* HomeViewController.swift */,
+				4397A6D2294C9207009A722C /* EndDestination.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -287,12 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4397A6D3294C9207009A722C /* EndDestination.swift in Sources */,
 				4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */,
 				4397A6CD294749DE009A722C /* LocationManager.swift in Sources */,
 				4323B7BE2941013A005B8FBF /* ViewController.swift in Sources */,
 				4323B7BA2941013A005B8FBF /* AppDelegate.swift in Sources */,
 				4323B7BC2941013A005B8FBF /* SceneDelegate.swift in Sources */,
-				6134DA14294B8BD8007E226B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

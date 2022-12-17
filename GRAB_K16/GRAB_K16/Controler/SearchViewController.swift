@@ -25,7 +25,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
     
     private let field: UITextField = {
         let field = UITextField()
-        field.placeholder = "Chọn điểm đến"
+        field.placeholder = "Tìm kiếm địa điểm"
         field.layer.cornerRadius = 9
         field.backgroundColor = .tertiarySystemBackground
         field.leftView = UIView(
@@ -104,6 +104,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         let coordinate = locations[indexPath.row].coordinates
         print(coordinate)
         delegate?.searchViewController(self, didSelectLocationWith: coordinate)
+        
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "EndDestination") as? EndDestination
+//            self.navigationController?.pushViewController(vc!, animated: true)
+        
     }
-//    func print("asdhak")
 }
