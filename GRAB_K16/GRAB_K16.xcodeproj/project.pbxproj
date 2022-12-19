@@ -124,7 +124,6 @@
 				61F26AD5294E42C400B11A08 /* TrafficViewController.swift */,
 				61F26AD7294E42F300B11A08 /* MapViewController.swift */,
 				4323B7BD2941013A005B8FBF /* ViewController.swift */,
-				4397A6CE29474A16009A722C /* SearchViewController.swift */,
 				4397A6D2294C9207009A722C /* EndDestination.swift */,
 			);
 			path = Controler;
@@ -155,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				4323B7C22941013C005B8FBF /* Assets.xcassets */,
+				4397A6CE29474A16009A722C /* SearchViewController.swift */,
 				4397A6CC294749DE009A722C /* LocationManager.swift */,
 			);
 			path = Common;
