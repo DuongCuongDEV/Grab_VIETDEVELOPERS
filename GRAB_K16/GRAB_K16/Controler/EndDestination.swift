@@ -79,14 +79,6 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
     
     
     
-    
-    
-
-    
-    
-    
-    
-    
     func searchViewController(_ vc: SearchViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
 
         
