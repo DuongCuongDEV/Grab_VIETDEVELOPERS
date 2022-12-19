@@ -10,11 +10,13 @@ import MapKit
 import FloatingPanel
 import CoreLocation
 
+var pickUpLocations = CLLocationCoordinate2D()
+
+
 class ViewController: UIViewController, SearchViewControllerDelegate, CLLocationManagerDelegate {
 
     let mapView = MKMapView()
     let panel = FloatingPanelController()
-    
     
 
     let manager = CLLocationManager()
@@ -80,7 +82,12 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
         mapView.addAnnotation(pin)
 
         mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
+        
+        pickUpLocations = coordinates
+        
+        
     }
+    
     
     
     
@@ -103,13 +110,15 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
 
         mapView.setRegion(MKCoordinateRegion(center: locValue, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         
-        print("location2222 \(locValue)")
-        
-//        print("location222233333 \(locValue)")
-//        print("location222233333 \(locValue)")        print("location222233333 \(locValue)")        print("location222233333 \(locValue)")
-//        print("location222233333 \(locValue)")        print("location222233333 \(locValue)")
+        pickUpLocations = locValue
     }
     
+    
+    
+    @IBAction func endDestination(_ sender: UIButton) {
+        let vc = EndDestination(nibName: "EndDestination", bundle: nil)
+            navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
