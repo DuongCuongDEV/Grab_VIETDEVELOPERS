@@ -32,9 +32,9 @@ class HomeViewController: UIViewController, ImageSlideshowDelegate {
         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
     }
 
-    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
-              print("current page:", page)
-    }
+//    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
+//              print("current page:", page)
+//    }
     
     func slideShow() {
         slideshow.slideshowInterval = 2.0

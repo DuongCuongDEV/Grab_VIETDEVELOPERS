@@ -6,80 +6,119 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
-class TrafficViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    class Traffic {
-        var image:String?
-        var title:String?
-        var subtitle:String?
-        var cost:Float!
-        var firstTime: Int?
-        var lastTime: Int?
-    }
-    var trafficList:[Traffic] = []
+var thongTinXeDuocChon = bookCar(tenXe: "", anhXE: "", doDaiQuangDuong: 0, thoiGian: 0, giaTien: 0, soNguoi:"", id: "0")
 
+class TrafficViewController: UIViewController {
+    
+    var bookCarData: bookCars = []
+
+    @IBOutlet var btnDatXe: UIButton!
     
     @IBOutlet weak var tblViewTrafficOption: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tblViewTrafficOption.register(UITableViewCell.self, forCellReuseIdentifier: "TrafficViewIndentifier")
+        
         tblViewTrafficOption.dataSource = self
         tblViewTrafficOption.delegate = self
+        tblViewTrafficOption.register(UINib(nibName: "DSXeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
+        designBtnDatXe()
         initData()
-        // Do any additional setup after loading the view.
-    }
-    func initData() {
-        let grabCar = Traffic()
-        grabCar.image = "baby-car 1"
-        grabCar.title = "GrabCar"
-        grabCar.subtitle = "Tối đa 4 hành khách"
-        grabCar.cost = 91.000
-        grabCar.firstTime = 2
-        grabCar.lastTime = 6
         
-        trafficList.append(grabCar)
-        trafficList.append(grabCar)
-        trafficList.append(grabCar)
-        trafficList.append(grabCar)
-        trafficList.append(grabCar)
-        trafficList.append(grabCar)
-        trafficList.append(grabCar)
-        trafficList.append(grabCar)
+        
     }
+    
+    func designBtnDatXe() {
+        btnDatXe.layer.borderWidth = 0.1
+        btnDatXe.layer.borderColor = UIColor.gray.cgColor
+        btnDatXe.layer.backgroundColor = UIColor(named: "custonButtonColor")?.cgColor
+        btnDatXe.layer.cornerRadius = 10
+    }
+    
+    func initData() {
+        let bikeCar = bookCar(tenXe: "Xe may", anhXE: "motorbike1", doDaiQuangDuong: 11, thoiGian: 30, giaTien: tinhTien(quangDuong: 11, thoiGian: 30, loaiPhuongTien: "PT1"), soNguoi: "Toi da 1 nguoi", id: "1")
+        let oto = bookCar(tenXe: "oTo", anhXE: "motorbike 2", doDaiQuangDuong: 5, thoiGian: 10, giaTien: tinhTien(quangDuong: 5, thoiGian: 30, loaiPhuongTien: "PT2"), soNguoi: "Toi da 5 nguoi", id: "2")
+        bookCarData.append(bikeCar)
+        bookCarData.append(oto)
+        
+    }
+    
+    
+
+   
+    
+  
+}
+
+extension TrafficViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trafficList.count
+        return bookCarData.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentTraffic = trafficList[indexPath.row]
-        let cell = tblViewTrafficOption.dequeueReusableCell(withIdentifier: "TrafficViewIndentifier", for: indexPath) as! CustomTableViewCell
+        let currentTraffic = bookCarData[indexPath.row]
+        let cell = tblViewTrafficOption.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DSXeTableViewCell
         
+        let currentBookCar = bookCarData[indexPath.row]
         
+        let avatarURL = URL(string: currentBookCar.anhXE)
+        cell.anhXe.kf.setImage(with: avatarURL)
+
         
-        cell.imgPhoto.image = UIImage(named: "\(currentTraffic.image!)")
-         
-        cell.lblTitle.text! = currentTraffic.title!
-         
-        cell.lblSubTitle.text! = currentTraffic.subtitle!
-         
-        cell.lblCost.text! = "\(currentTraffic.cost!)đ"
-         
-        cell.lblTime.text! = "\(currentTraffic.firstTime!) - \(currentTraffic.lastTime!)phút"
+        cell.lblTenXe.text = currentBookCar.tenXe
+        cell.lblGiaTien.text = "\(String(currentBookCar.giaTien))đ"
+        cell.lblSoLuongHanhKhach.text = currentBookCar.soNguoi
             return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        //l     Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print(indexPath.count)
+         thongTinXeDuocChon = bookCarData[indexPath.row]
+        print(thongTinXeDuocChon)
+        
     }
-    */
+    
+    
+
+    func tinhTien(quangDuong: Float, thoiGian: Int, loaiPhuongTien: String) -> Double {
+        var tongSoTien = 0;
+        
+        switch(loaiPhuongTien) {
+        case "PT1":
+                if(quangDuong < 2) {
+                    tongSoTien = 12000
+                } else {
+                    let thoiGianConLai = thoiGian - (thoiGian / Int(quangDuong)) * 2
+                    let tongTienQuangDuongConLai = (quangDuong - 2) * 5000
+                    tongSoTien = Int(12000 + Int(tongTienQuangDuongConLai) +  thoiGianConLai * 350)
+                }
+            
+                break
+        case "PT2":
+            if(quangDuong < 2) {
+                tongSoTien = 20000
+            } else {
+                let thoiGianConLai = thoiGian - (thoiGian / Int(quangDuong)) * 2
+                let tongTienQuangDuongConLai = (quangDuong - 2) * 10000
+                tongSoTien = Int(20000 + Int(tongTienQuangDuongConLai) +  thoiGianConLai * 350)
+            }
+            break
+            
+        default:
+            break
+        }
+        
+        return Double(tongSoTien)
+    }
+    
 }
     

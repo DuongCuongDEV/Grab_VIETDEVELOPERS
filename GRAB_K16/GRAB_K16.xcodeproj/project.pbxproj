@@ -20,10 +20,14 @@
 		61F26ACE294E306D00B11A08 /* ImageSlideshow/Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26ACD294E306D00B11A08 /* ImageSlideshow/Alamofire */; };
 		61F26AD0294E306D00B11A08 /* ImageSlideshow/Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26ACF294E306D00B11A08 /* ImageSlideshow/Kingfisher */; };
 		61F26AD2294E306D00B11A08 /* ImageSlideshow/SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26AD1294E306D00B11A08 /* ImageSlideshow/SDWebImage */; };
-		61F26AD4294E426B00B11A08 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AD3294E426B00B11A08 /* CustomTableViewCell.swift */; };
 		61F26AD6294E42C400B11A08 /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AD5294E42C400B11A08 /* TrafficViewController.swift */; };
 		61F26AD8294E42F300B11A08 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AD7294E42F300B11A08 /* MapViewController.swift */; };
 		61F26ADC294E452A00B11A08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26ADB294E452A00B11A08 /* HomeViewController.swift */; };
+		9B6DA62E29506EC800BEF8A5 /* bookCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DA62D29506EC800BEF8A5 /* bookCarModel.swift */; };
+		9B6DA63029507B3800BEF8A5 /* APIDanhSachXe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DA62F29507B3800BEF8A5 /* APIDanhSachXe.swift */; };
+		9B6DA63329507BA700BEF8A5 /* DSXeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DA63129507BA700BEF8A5 /* DSXeTableViewCell.swift */; };
+		9B6DA63429507BA700BEF8A5 /* DSXeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6DA63229507BA700BEF8A5 /* DSXeTableViewCell.xib */; };
+		9B6DA63629507BDA00BEF8A5 /* DanhSachXeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DA63529507BDA00BEF8A5 /* DanhSachXeViewController.swift */; };
 		B0DDB861E1546EA3B2EB443B /* Pods_GRAB_K16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,12 +43,16 @@
 		4397A6CC294749DE009A722C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4397A6CE29474A16009A722C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4397A6D2294C9207009A722C /* EndDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndDestination.swift; sourceTree = "<group>"; };
-		61F26AD3294E426B00B11A08 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		61F26AD5294E42C400B11A08 /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
 		61F26AD7294E42F300B11A08 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		61F26ADB294E452A00B11A08 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.release.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.release.xcconfig"; sourceTree = "<group>"; };
 		82139CD650CE053DC97B5058 /* Pods-GRAB_K16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.debug.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.debug.xcconfig"; sourceTree = "<group>"; };
+		9B6DA62D29506EC800BEF8A5 /* bookCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookCarModel.swift; sourceTree = "<group>"; };
+		9B6DA62F29507B3800BEF8A5 /* APIDanhSachXe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDanhSachXe.swift; sourceTree = "<group>"; };
+		9B6DA63129507BA700BEF8A5 /* DSXeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSXeTableViewCell.swift; sourceTree = "<group>"; };
+		9B6DA63229507BA700BEF8A5 /* DSXeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSXeTableViewCell.xib; sourceTree = "<group>"; };
+		9B6DA63529507BDA00BEF8A5 /* DanhSachXeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhSachXeViewController.swift; sourceTree = "<group>"; };
 		CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRAB_K16.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,12 +128,12 @@
 			isa = PBXGroup;
 			children = (
 				61F26ADB294E452A00B11A08 /* HomeViewController.swift */,
-				61F26AD3294E426B00B11A08 /* CustomTableViewCell.swift */,
 				61F26AD5294E42C400B11A08 /* TrafficViewController.swift */,
 				61F26AD7294E42F300B11A08 /* MapViewController.swift */,
 				4323B7BD2941013A005B8FBF /* ViewController.swift */,
 				4397A6CE29474A16009A722C /* SearchViewController.swift */,
 				4397A6D2294C9207009A722C /* EndDestination.swift */,
+				9B6DA63529507BDA00BEF8A5 /* DanhSachXeViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 		4323B7D229410310005B8FBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B6DA62C29506EA400BEF8A5 /* Dat_Chuyen */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +156,8 @@
 		4323B7D629410428005B8FBF /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				9B6DA63129507BA700BEF8A5 /* DSXeTableViewCell.swift */,
+				9B6DA63229507BA700BEF8A5 /* DSXeTableViewCell.xib */,
 			);
 			path = UITableViewCells;
 			sourceTree = "<group>";
@@ -179,8 +190,17 @@
 		4323B7DA2941050C005B8FBF /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9B6DA62F29507B3800BEF8A5 /* APIDanhSachXe.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		9B6DA62C29506EA400BEF8A5 /* Dat_Chuyen */ = {
+			isa = PBXGroup;
+			children = (
+				9B6DA62D29506EC800BEF8A5 /* bookCarModel.swift */,
+			);
+			path = Dat_Chuyen;
 			sourceTree = "<group>";
 		};
 		D687CBD5D91A8D6905852E88 /* Pods */ = {
@@ -262,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4323B7C62941013C005B8FBF /* LaunchScreen.storyboard in Resources */,
+				9B6DA63429507BA700BEF8A5 /* DSXeTableViewCell.xib in Resources */,
 				4323B7C32941013C005B8FBF /* Assets.xcassets in Resources */,
 				4323B7C12941013A005B8FBF /* Main.storyboard in Resources */,
 			);
@@ -318,11 +339,14 @@
 			files = (
 				61F26AD8294E42F300B11A08 /* MapViewController.swift in Sources */,
 				4397A6D3294C9207009A722C /* EndDestination.swift in Sources */,
-				61F26AD4294E426B00B11A08 /* CustomTableViewCell.swift in Sources */,
+				9B6DA63029507B3800BEF8A5 /* APIDanhSachXe.swift in Sources */,
 				61F26AD6294E42C400B11A08 /* TrafficViewController.swift in Sources */,
+				9B6DA63629507BDA00BEF8A5 /* DanhSachXeViewController.swift in Sources */,
 				4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */,
 				4397A6CD294749DE009A722C /* LocationManager.swift in Sources */,
+				9B6DA63329507BA700BEF8A5 /* DSXeTableViewCell.swift in Sources */,
 				4323B7BE2941013A005B8FBF /* ViewController.swift in Sources */,
+				9B6DA62E29506EC800BEF8A5 /* bookCarModel.swift in Sources */,
 				61F26ADC294E452A00B11A08 /* HomeViewController.swift in Sources */,
 				4323B7BA2941013A005B8FBF /* AppDelegate.swift in Sources */,
 				4323B7BC2941013A005B8FBF /* SceneDelegate.swift in Sources */,
