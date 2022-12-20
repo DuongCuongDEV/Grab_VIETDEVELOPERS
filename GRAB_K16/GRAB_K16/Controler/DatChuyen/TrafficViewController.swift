@@ -40,10 +40,22 @@ class TrafficViewController: UIViewController {
     }
     
     func initData() {
-        let bikeCar = bookCar(tenXe: "Xe may", anhXE: "motorbike1", doDaiQuangDuong: 11, thoiGian: 30, giaTien: tinhTien(quangDuong: 11, thoiGian: 30, loaiPhuongTien: "PT1"), soNguoi: "Toi da 1 nguoi", id: "1")
-        let oto = bookCar(tenXe: "oTo", anhXE: "motorbike 2", doDaiQuangDuong: 5, thoiGian: 10, giaTien: tinhTien(quangDuong: 5, thoiGian: 30, loaiPhuongTien: "PT2"), soNguoi: "Toi da 5 nguoi", id: "2")
-        bookCarData.append(bikeCar)
-        bookCarData.append(oto)
+        let GrabBike = bookCar(tenXe: "GrabBike", anhXE: "bike", doDaiQuangDuong: 11, thoiGian: 30, giaTien: tinhTien(quangDuong: 11, thoiGian: 30, loaiPhuongTien: "PT1"), soNguoi: "Tối đa 1 hành khách", id: "1")
+        let GrabCar = bookCar(tenXe: "GrabCar", anhXE: "4cho", doDaiQuangDuong: 5, thoiGian: 10, giaTien: tinhTien(quangDuong: 5, thoiGian: 30, loaiPhuongTien: "PT2"), soNguoi: "Tối đa 4 hành khách", id: "2")
+        let GrabTaxi4Cho = bookCar(tenXe: "GrabTaxxi 4 chỗ", anhXE: "4cho", doDaiQuangDuong: 5, thoiGian: 10, giaTien: tinhTien(quangDuong: 5, thoiGian: 30, loaiPhuongTien: "PT3"), soNguoi: "Tối đa 4 hành khách, giá cước theo đồng hồ", id: "3")
+        let GrabCar7 = bookCar(tenXe: "GrabCar 7", anhXE: "7cho", doDaiQuangDuong: 5, thoiGian: 10, giaTien: tinhTien(quangDuong: 10, thoiGian: 30, loaiPhuongTien: "PT3"), soNguoi: "Tối đa 7 hành khách", id: "4")
+        let GrabCar4LienTinh = bookCar(tenXe: "GrabCar 4 chỗ(liên tỉnh - 2 chiều)", anhXE: "4cho", doDaiQuangDuong: 5, thoiGian: 20, giaTien: tinhTien(quangDuong: 5, thoiGian: 30, loaiPhuongTien: "PT3"), soNguoi: "Tối đa 4 hành khách", id: "5")
+        let GrabCar7LienTinh = bookCar(tenXe: "GrabCar 7 chỗ(liên tỉnh - 2 chiều)", anhXE: "7cho", doDaiQuangDuong: 5, thoiGian: 20, giaTien: tinhTien(quangDuong: 5, thoiGian: 30, loaiPhuongTien: "PT3"), soNguoi: "Tối đa 7 hành khách", id: "6")
+        
+        
+        
+        bookCarData.append(GrabBike)
+        bookCarData.append(GrabCar)
+        bookCarData.append(GrabTaxi4Cho)
+        bookCarData.append(GrabCar7)
+        bookCarData.append(GrabCar4LienTinh)
+        bookCarData.append(GrabCar7LienTinh)
+        
         
     }
     
@@ -63,14 +75,16 @@ extension TrafficViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentTraffic = bookCarData[indexPath.row]
         let cell = tblViewTrafficOption.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DSXeTableViewCell
+        
+//        let currentTraffic = bookCarData[indexPath.row]
         
         let currentBookCar = bookCarData[indexPath.row]
         
-        let avatarURL = URL(string: currentBookCar.anhXE)
-        cell.anhXe.kf.setImage(with: avatarURL)
+//        let avatarURL = URL(string: currentBookCar.anhXE)
+//        cell.anhXe.kf.setImage(with: avatarURL)
 
+        cell.anhXe.image = UIImage(named: currentBookCar.anhXE)
         
         cell.lblTenXe.text = currentBookCar.tenXe
         cell.lblGiaTien.text = "\(String(currentBookCar.giaTien))đ"
@@ -110,6 +124,16 @@ extension TrafficViewController: UITableViewDelegate, UITableViewDataSource {
                 let thoiGianConLai = thoiGian - (thoiGian / Int(quangDuong)) * 2
                 let tongTienQuangDuongConLai = (quangDuong - 2) * 10000
                 tongSoTien = Int(20000 + Int(tongTienQuangDuongConLai) +  thoiGianConLai * 350)
+            }
+            break
+            
+        case "PT3":
+            if(quangDuong < 2) {
+                tongSoTien = 25000
+            } else {
+                let thoiGianConLai = thoiGian - (thoiGian / Int(quangDuong)) * 2
+                let tongTienQuangDuongConLai = (quangDuong - 2) * 14000
+                tongSoTien = Int(25000 + Int(tongTienQuangDuongConLai) +  thoiGianConLai * 400)
             }
             break
             
