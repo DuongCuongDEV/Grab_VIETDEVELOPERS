@@ -18,7 +18,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
 
     private let lable: UILabel = {
        let lable = UILabel()
-        lable.text = "Bạn ở đâu?"
+        lable.text = "Tìm kiếm vị trí"
         lable.font = . systemFont(ofSize: 24, weight: .semibold)
         return lable
     }()
@@ -104,6 +104,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         let coordinate = locations[indexPath.row].coordinates
         print(coordinate)
         delegate?.searchViewController(self, didSelectLocationWith: coordinate)
+
     }
-//    func print("asdhak")
 }

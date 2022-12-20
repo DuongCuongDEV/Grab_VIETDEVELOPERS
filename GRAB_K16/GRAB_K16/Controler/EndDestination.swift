@@ -10,7 +10,8 @@ import MapKit
 import FloatingPanel
 import CoreLocation
 
-class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewControllerDelegate {
+
+class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewControllerDelegate, MKMapViewDelegate {
 
     let mapView = MKMapView()
     let panel = FloatingPanelController()
@@ -27,6 +28,8 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
         // Do any additional setup after loading the view.
         
         view.addSubview(mapView)
+        mapView.delegate = self
+
         
         let searchVC = SearchViewController()
         searchVC.delegate = self
@@ -50,11 +53,6 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
         
         
         
-        
-        
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {return}
-        
-        
         panel.move(to: .tip, animated: true)
 
 //        mapView.removeAnnotations(mapView.annotations)
@@ -62,12 +60,11 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
        
         let pin = MKPointAnnotation()
  
-        pin.coordinate = locValue
+        pin.coordinate = pickUpLocations
         mapView.addAnnotation(pin)
 
-        mapView.setRegion(MKCoordinateRegion(center: locValue, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
+        mapView.setRegion(MKCoordinateRegion(center: pickUpLocations, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         
-        print("location2222 \(locValue)")
         
     }
     
@@ -86,9 +83,14 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
         guard let coordinates = coordinates else {
             return
         }
+        
+        
 
+        self.mapView.removeOverlays(self.mapView.overlays)
+        
+        
         panel.move(to: .tip, animated: true)
-//        mapView.removeAnnotations(mapView.annotations)
+        mapView.removeAnnotations(mapView.annotations)
 
         let pin = MKPointAnnotation()
 
@@ -96,8 +98,72 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
         mapView.addAnnotation(pin)
 
         mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
+        
+        self.mapThis(destinationCord: coordinates)
+        
+        //My location
+        let myLocation = CLLocation(latitude: pickUpLocations.latitude, longitude: pickUpLocations.longitude)
+
+        //My buddy's location
+        let myBuddysLocation = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
+
+        //Measuring my distance to my buddy's (in km)
+        let distance = myLocation.distance(from: myBuddysLocation) / 1000 * 1.2
+
+        //Display the result in km
+        print(String(format: "The distance to my buddy is %.01fkm", distance))
+        
+        
+            
+
     }
+    
+    
+    
+    
+    
+    
+    func mapThis(destinationCord: CLLocationCoordinate2D){
+        let souceCordinate = pickUpLocations
+        
+        let soucePlaceMark = MKPlacemark(coordinate: souceCordinate)
+        let destPlaceMark = MKPlacemark(coordinate: destinationCord)
+        
+        let sourceItem = MKMapItem(placemark: soucePlaceMark)
+        let destItem = MKMapItem(placemark: destPlaceMark)
+        
+        let destinationRequest = MKDirections.Request()
+        destinationRequest.source = sourceItem
+        destinationRequest.destination = destItem
+        destinationRequest.transportType = .automobile
+        destinationRequest.requestsAlternateRoutes = true
+        
+        let directions = MKDirections(request: destinationRequest)
+        directions.calculate{
+            (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("Something is wrong :")
+                }
+                return
+            }
+            let route = response.routes[0]
+            self.mapView.addOverlay(route.polyline)
+            self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let render = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        render.strokeColor = .blue
+        return render
+    }
+
+    
     
     
 
 }
+    
+
