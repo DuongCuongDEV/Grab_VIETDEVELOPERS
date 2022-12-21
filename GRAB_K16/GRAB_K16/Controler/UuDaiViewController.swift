@@ -37,6 +37,12 @@ class UuDaiViewController: UIViewController {
 }
 
 extension UuDaiViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataUuDai.count
     }
@@ -47,7 +53,7 @@ extension UuDaiViewController: UITableViewDelegate, UITableViewDataSource {
         let currentUuDai = dataUuDai[indexPath.row]
         
         cell.lblTenUuDai.text = currentUuDai.tenUuDai
-        cell.lblSoTienGiam.text = String(currentUuDai.soTienGiam)
+        cell.lblSoTienGiam.text = "\(String(currentUuDai.soTienGiam))đ"
         
         return cell
     }

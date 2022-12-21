@@ -57,6 +57,10 @@ class ViewController: UIViewController, SearchViewControllerDelegate, CLLocation
     }
 
     
+    @IBAction func btnTapDiemDen(_ sender: Any) {
+        let chuyenDenDiemDen = self.storyboard?.instantiateViewController(withIdentifier: "EndDestination") as! EndDestination
+        self.navigationController?.pushViewController(chuyenDenDiemDen, animated: true)
+    }
     
     
     

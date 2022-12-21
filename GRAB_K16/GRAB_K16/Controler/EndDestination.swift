@@ -11,6 +11,11 @@ import FloatingPanel
 import CoreLocation
 
 
+var diemKetThuc = CLLocationCoordinate2D()
+
+var quangDuong = CLLocationDistance()
+
+
 class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewControllerDelegate, MKMapViewDelegate {
 
     let mapView = MKMapView()
@@ -34,8 +39,11 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
         let searchVC = SearchViewController()
         searchVC.delegate = self
         
+        
+        //bo
         panel.set(contentViewController: searchVC)
         panel.addPanel(toParent: self)
+        //
         
        
        
@@ -67,6 +75,16 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
         
         
     }
+    
+    //MARK: chuyen man
+    
+    @IBAction func btnTabDatXe(_ sender: Any) {
+        let chuyenSangMHDatXe = self.storyboard?.instantiateViewController(withIdentifier: "TrafficViewController") as! TrafficViewController
+        self.navigationController?.pushViewController(chuyenSangMHDatXe, animated: true)
+    }
+    
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -101,6 +119,7 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
         
         self.mapThis(destinationCord: coordinates)
         
+        diemKetThuc = coordinates
         //My location
         let myLocation = CLLocation(latitude: pickUpLocations.latitude, longitude: pickUpLocations.longitude)
 
@@ -108,10 +127,12 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
         let myBuddysLocation = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
 
         //Measuring my distance to my buddy's (in km)
-        let distance = myLocation.distance(from: myBuddysLocation) / 1000 * 1.2
+        var distance = myLocation.distance(from: myBuddysLocation) / 1000 * 1.2
 
+        quangDuong = distance
+        
         //Display the result in km
-        print(String(format: "The distance to my buddy is %.01fkm", distance))
+        print(String(format: "Do dai quang duong %.01fkm", quangDuong))
         
         
             
@@ -125,19 +146,19 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
     
     func mapThis(destinationCord: CLLocationCoordinate2D){
         let souceCordinate = pickUpLocations
-        
+
         let soucePlaceMark = MKPlacemark(coordinate: souceCordinate)
         let destPlaceMark = MKPlacemark(coordinate: destinationCord)
-        
+
         let sourceItem = MKMapItem(placemark: soucePlaceMark)
         let destItem = MKMapItem(placemark: destPlaceMark)
-        
+
         let destinationRequest = MKDirections.Request()
         destinationRequest.source = sourceItem
         destinationRequest.destination = destItem
         destinationRequest.transportType = .automobile
         destinationRequest.requestsAlternateRoutes = true
-        
+
         let directions = MKDirections(request: destinationRequest)
         directions.calculate{
             (response, error) in
@@ -150,13 +171,13 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
             let route = response.routes[0]
             self.mapView.addOverlay(route.polyline)
             self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-            
+
         }
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let render = MKPolylineRenderer(overlay: overlay as! MKPolyline)
-        render.strokeColor = .blue
+        render.strokeColor = UIColor(named: "customTextColor")
         return render
     }
 

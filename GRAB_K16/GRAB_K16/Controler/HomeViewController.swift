@@ -26,15 +26,20 @@ class HomeViewController: UIViewController, ImageSlideshowDelegate {
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
             slideshow.addGestureRecognizer(recognizer)
     }
+    
+    
+    @IBAction func btnTapTimKiem(_ sender: UIButton) {
+        let chuyenDenDiemDon = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(chuyenDenDiemDon, animated: true)
+    }
+    
 
+    
     @objc func didTap() {
         let fullScreenController = slideshow.presentFullScreenController(from: self)
         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
     }
 
-//    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
-//              print("current page:", page)
-//    }
     
     func slideShow() {
         slideshow.slideshowInterval = 2.0
