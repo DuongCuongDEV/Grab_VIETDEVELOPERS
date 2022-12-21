@@ -9,51 +9,55 @@ import ImageSlideshow
 import ImageSlideshowAlamofire
 
 class HomeViewController: UIViewController, ImageSlideshowDelegate {
-    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
-              print("current page:", page)
-          }
     
     @IBOutlet weak var slideshow: ImageSlideshow!
-    let alamofireSource = [AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+    
+    let alamofireSource = [
+        AlamofireSource(urlString: "https://st3.depositphotos.com/1177973/12491/i/950/depositphotos_124917666-stock-photo-taxi-driver-near-car.jpg")!,
+        AlamofireSource(urlString: "https://www.ridester.com/wp-content/uploads/2021/09/uber_driver_requirements_1.jpg")!,
+        AlamofireSource(urlString: "https://d39raawggeifpx.cloudfront.net/styles/16_9_desktop/s3/articleimages/0717_Russia_tmt_yandex_taxi_car_adverts_CROPPED_0_2.png")!,
+        AlamofireSource(urlString: "https://www.ridester.com/wp-content/uploads/2018/07/long_distance_uber_2.jpg")!,
+        AlamofireSource(urlString: "https://www.ridester.com/wp-content/uploads/2021/07/loans_for_uber_drivers_2-1.jpg")!
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slideshow.slideshowInterval = 2.0
-               slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
-               slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
-
-               let pageControl = UIPageControl()
-               pageControl.currentPageIndicatorTintColor = UIColor.red
-               pageControl.pageIndicatorTintColor = UIColor.lightGray
-               slideshow.pageIndicator = pageControl
-
-               // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
-               slideshow.activityIndicator = DefaultActivityIndicator()
-               slideshow.delegate = self
-
-               // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
-               slideshow.setImageInputs(alamofireSource)
-
-               let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
-               slideshow.addGestureRecognizer(recognizer)
-           }
-
-           @objc func didTap() {
-               let fullScreenController = slideshow.presentFullScreenController(from: self)
-               // set the activity indicator for full screen controller (skipping the line will show no activity indicator)
-               fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
-           }
+            slideShow()
+            let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
+            slideshow.addGestureRecognizer(recognizer)
+    }
+    
+    
+    @IBAction func btnTapTimKiem(_ sender: UIButton) {
+        let chuyenDenDiemDon = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(chuyenDenDiemDon, animated: true)
+    }
     
 
-    /*
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func didTap() {
+        let fullScreenController = slideshow.presentFullScreenController(from: self)
+        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
     }
-    */
 
+    
+    func slideShow() {
+        slideshow.slideshowInterval = 2.0
+        slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
+        slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
+
+        let pageControl = UIPageControl()
+        pageControl.currentPageIndicatorTintColor = UIColor.red
+        pageControl.pageIndicatorTintColor = UIColor.lightGray
+        slideshow.pageIndicator = pageControl
+
+        slideshow.activityIndicator = DefaultActivityIndicator()
+        slideshow.delegate = self
+
+        slideshow.setImageInputs(alamofireSource)
+    }
+    
+    
 
 
 }
