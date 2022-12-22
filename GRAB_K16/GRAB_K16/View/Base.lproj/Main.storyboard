@@ -108,7 +108,6 @@
         <!--Trang chủ-->
         <scene sceneID="2tc-X1-VsE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h4T-d4-jvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="wQ3-mT-n56" customClass="HomeViewController" customModule="GRAB_K16" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wcM-U4-fYB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1450"/>
@@ -360,6 +359,7 @@
                         <outlet property="slideshow" destination="A2F-6y-1Ud" id="Xnl-lx-FtL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4T-d4-jvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5215.9420289855079" y="1095.5357142857142"/>
         </scene>
@@ -636,6 +636,7 @@
                     <view key="view" contentMode="scaleToFill" id="n6g-nu-YWO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0Oa-hF-phx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
