@@ -177,7 +177,7 @@ class EndDestination: UIViewController, CLLocationManagerDelegate, SearchViewCon
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let render = MKPolylineRenderer(overlay: overlay as! MKPolyline)
-        render.strokeColor = UIColor(named: "customTextColor")
+        render.strokeColor = .blue
         return render
     }
 

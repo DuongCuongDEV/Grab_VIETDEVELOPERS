@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0459F136295450F200D1352F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459F135295450F200D1352F /* LoginViewController.swift */; };
+		0459F1382954512B00D1352F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459F1372954512B00D1352F /* RegisterViewController.swift */; };
+		0473415029545405008CA026 /* APIDangNhap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473414F29545405008CA026 /* APIDangNhap.swift */; };
+		0473415329545479008CA026 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473415229545479008CA026 /* UserModel.swift */; };
+		0473415529545720008CA026 /* BackLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473415429545720008CA026 /* BackLoginViewController.swift */; };
 		4323B7BA2941013A005B8FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323B7B92941013A005B8FBF /* AppDelegate.swift */; };
 		4323B7BC2941013A005B8FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323B7BB2941013A005B8FBF /* SceneDelegate.swift */; };
 		4323B7BE2941013A005B8FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323B7BD2941013A005B8FBF /* ViewController.swift */; };
@@ -38,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0459F135295450F200D1352F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0459F1372954512B00D1352F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0473414F29545405008CA026 /* APIDangNhap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDangNhap.swift; sourceTree = "<group>"; };
+		0473415229545479008CA026 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		0473415429545720008CA026 /* BackLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackLoginViewController.swift; sourceTree = "<group>"; };
 		4323B7B62941013A005B8FBF /* GRAB_K16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GRAB_K16.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4323B7B92941013A005B8FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4323B7BB2941013A005B8FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0473414E295453DF008CA026 /* API Đăng nhập */ = {
+			isa = PBXGroup;
+			children = (
+				0473414F29545405008CA026 /* APIDangNhap.swift */,
+			);
+			name = "API Đăng nhập";
+			path = "API Đăng nhập";
+			sourceTree = "<group>";
+		};
+		0473415129545454008CA026 /* DangNhap */ = {
+			isa = PBXGroup;
+			children = (
+				0473415229545479008CA026 /* UserModel.swift */,
+			);
+			path = DangNhap;
+			sourceTree = "<group>";
+		};
 		104BCE944F932BC6BA1DCD26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +180,7 @@
 		4323B7D229410310005B8FBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0473415129545454008CA026 /* DangNhap */,
 				9B36216B2951C65E00027265 /* Uu_dai */,
 				9B6DA62C29506EA400BEF8A5 /* Dat_Chuyen */,
 			);
@@ -206,6 +234,7 @@
 		4323B7DA2941050C005B8FBF /* API */ = {
 			isa = PBXGroup;
 			children = (
+				0473414E295453DF008CA026 /* API Đăng nhập */,
 				9B36216A2951C64500027265 /* API ưu đãi */,
 				9B3621692951C63500027265 /* API danh sach xe */,
 			);
@@ -217,6 +246,9 @@
 			children = (
 				61F26AD5294E42C400B11A08 /* TrafficViewController.swift */,
 				9B6DA63529507BDA00BEF8A5 /* DanhSachXeViewController.swift */,
+				0459F135295450F200D1352F /* LoginViewController.swift */,
+				0459F1372954512B00D1352F /* RegisterViewController.swift */,
+				0473415429545720008CA026 /* BackLoginViewController.swift */,
 			);
 			path = DatChuyen;
 			sourceTree = "<group>";
@@ -393,16 +425,21 @@
 				4397A6D3294C9207009A722C /* EndDestination.swift in Sources */,
 				9B36216F2951C75C00027265 /* APIUuDai.swift in Sources */,
 				9B6DA63029507B3800BEF8A5 /* APIDanhSachXe.swift in Sources */,
+				0459F136295450F200D1352F /* LoginViewController.swift in Sources */,
 				9B36216D2951C6A100027265 /* UuDaiModel.swift in Sources */,
 				9B3621672951C31E00027265 /* DSUuDaiTableViewCell.swift in Sources */,
 				61F26AD6294E42C400B11A08 /* TrafficViewController.swift in Sources */,
 				9B6DA63629507BDA00BEF8A5 /* DanhSachXeViewController.swift in Sources */,
 				4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */,
+				0473415329545479008CA026 /* UserModel.swift in Sources */,
 				4397A6CD294749DE009A722C /* LocationManager.swift in Sources */,
+				0459F1382954512B00D1352F /* RegisterViewController.swift in Sources */,
 				9B6DA63329507BA700BEF8A5 /* DSXeTableViewCell.swift in Sources */,
 				4323B7BE2941013A005B8FBF /* ViewController.swift in Sources */,
+				0473415529545720008CA026 /* BackLoginViewController.swift in Sources */,
 				9B3621762951ED4200027265 /* UuDaiViewController.swift in Sources */,
 				9B6DA62E29506EC800BEF8A5 /* bookCarModel.swift in Sources */,
+				0473415029545405008CA026 /* APIDangNhap.swift in Sources */,
 				61F26ADC294E452A00B11A08 /* HomeViewController.swift in Sources */,
 				4323B7BA2941013A005B8FBF /* AppDelegate.swift in Sources */,
 				9B3621782951F12D00027265 /* ChiTietUuDaiViewController.swift in Sources */,
