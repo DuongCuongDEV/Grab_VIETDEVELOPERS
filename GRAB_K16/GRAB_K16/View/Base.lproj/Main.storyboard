@@ -264,7 +264,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97C-sQ-I3Y">
-                                <rect key="frame" x="-4" y="811" width="413" height="47"/>
+                                <rect key="frame" x="-4" y="810" width="413" height="48"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="home" image="home (4) 1" width="78" id="dpg-7n-dBV"/>
@@ -605,20 +605,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYp-IM-Lh2">
-                                <rect key="frame" x="20" y="48" width="374" height="44"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Tìm ưu đãi cụ thể" translatesAutoresizingMaskIntoConstraints="NO" id="fYp-IM-Lh2">
+                                <rect key="frame" x="20" y="48" width="333" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="9eG-Jh-rD7" id="Nak-SS-avz"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7F-GM-Uvp">
+                                <rect key="frame" x="353" y="54" width="41" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jor-dz-egw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="FfP-dg-Le1"/>
                     <connections>
+                        <outlet property="lblThongBao" destination="kuQ-ge-jnW" id="Wyz-nq-u7b"/>
                         <outlet property="searchUuDai" destination="fYp-IM-Lh2" id="qRE-aP-BCc"/>
                         <outlet property="tblUuDai" destination="tz8-BB-COX" id="1tP-xR-eXI"/>
                     </connections>

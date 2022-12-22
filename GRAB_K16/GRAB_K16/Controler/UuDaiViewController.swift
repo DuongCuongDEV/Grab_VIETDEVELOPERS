@@ -11,7 +11,9 @@ import UIKit
 class UuDaiViewController: UIViewController {
     
     var dataUuDai: uuDais = []
-    var searchedUuDai: [String] = []
+    
+    @IBOutlet var lblThongBao: UILabel!
+    //    var searching = false
     
     @IBOutlet var searchUuDai: UISearchBar!
 
@@ -24,11 +26,9 @@ class UuDaiViewController: UIViewController {
         
         tblUuDai.register(UINib(nibName: "DSUuDaiTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
-//        searchUuDai.delegate = self
-        
         getUuDaiFromAPI()
+        
     }
-    
     
     
     func getUuDaiFromAPI() {
@@ -51,6 +51,12 @@ extension UuDaiViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if searching {
+//            return searchedUuDai.count
+//        }
+        if dataUuDai.count == 0 {
+            lblThongBao.text = "Không có dữ liệu"
+        }
         return dataUuDai.count
     }
     
@@ -58,7 +64,6 @@ extension UuDaiViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tblUuDai.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DSUuDaiTableViewCell
         
         let currentUuDai = dataUuDai[indexPath.row]
-        
         cell.lblTenUuDai.text = currentUuDai.tenUuDai
         cell.lblSoTienGiam.text = "\(String(currentUuDai.soTienGiam))đ"
         
@@ -67,10 +72,10 @@ extension UuDaiViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
-
+//
 //extension UuDaiViewController: UISearchBarDelegate {
 //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        <#code#>
+//
 //    }
 //    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
 //        <#code#>
