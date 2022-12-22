@@ -11,14 +11,21 @@ import UIKit
 class UuDaiViewController: UIViewController {
     
     var dataUuDai: uuDais = []
+    var searchedUuDai: [String] = []
     
+    @IBOutlet var searchUuDai: UISearchBar!
+
     @IBOutlet var tblUuDai: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tblUuDai.delegate = self
         tblUuDai.dataSource = self
+        
         tblUuDai.register(UINib(nibName: "DSUuDaiTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
+        searchUuDai.delegate = self
+        
         getUuDaiFromAPI()
     }
     
@@ -61,5 +68,13 @@ extension UuDaiViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+extension UuDaiViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        <#code#>
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        <#code#>
+    }
+}
 
 
