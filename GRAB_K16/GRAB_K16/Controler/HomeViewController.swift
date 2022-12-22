@@ -8,16 +8,73 @@ import UIKit
 import ImageSlideshow
 import ImageSlideshowAlamofire
 
-class HomeViewController: UIViewController, ImageSlideshowDelegate {
+class HomeViewController: UIViewController, ImageSlideshowDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    var list = [
+        [
+            "images": "car 1",
+            "title": "oto"
+        ],
+        [
+            "images": "motorbike 1",
+            "title": "xe máy"
+        ],
+        [
+            "images": "motorbike 2",
+            "title": "đồ ăn"
+        ],
+        [
+            "images": "package 1",
+            "title": "giao hàng"
+        ],
+        [
+            "images": "tag 1",
+            "title": "ưu đãi"
+        ]
+    ]
+    @IBOutlet weak var cltItemView: UICollectionView!
+    
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
               print("current page:", page)
           }
     
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = cltItemView.dequeueReusableCell(withReuseIdentifier: "navBarCell", for: indexPath)
+        
+        let currentList = list[indexPath.row]
+        let lblTitle = cell.viewWithTag(2) as! UILabel
+        lblTitle.text = currentList["title"]
+        let imgPicture = cell.viewWithTag(3) as! UIImageView
+        imgPicture.image = UIImage(named: "\(currentList["images"]!)")
+        
+        return cell
+    }
+    
     @IBOutlet weak var slideshow: ImageSlideshow!
-    let alamofireSource = [AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+    let alamofireSource = [
+    ImageSource(image: UIImage(named: "319741263_676174654011613_1073944731900936552_n")!),
+    ImageSource(image: UIImage(named: "319868516_3233707650226225_3437282427379472407_n")!),
+    ImageSource(image: UIImage(named: "320554655_489907816606783_2074546054760606815_n")!)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cltItemView.delegate = self
+        cltItemView.dataSource = self
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let screenWith = UIScreen.main.bounds.width
+        layout.itemSize = CGSize(width: screenWith/5-10, height: 128)
+        cltItemView.collectionViewLayout = layout
         slideshow.slideshowInterval = 2.0
                slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
                slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
