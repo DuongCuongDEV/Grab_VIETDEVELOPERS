@@ -52,17 +52,27 @@ class HomeViewController: UIViewController, ImageSlideshowDelegate, UICollection
         let currentList = list[indexPath.row]
         let lblTitle = cell.viewWithTag(2) as! UILabel
         lblTitle.text = currentList["title"]
-        let imgPicture = cell.viewWithTag(3) as! UIImageView
-        imgPicture.image = UIImage(named: "\(currentList["images"]!)")
+        let btnItem = cell.viewWithTag(1) as! UIButton
+        let image = UIImage(named: "\(currentList["images"]!)")
+        btnItem.setImage(image, for: .normal)
+        
         
         return cell
     }
     
     @IBOutlet weak var slideshow: ImageSlideshow!
-    let alamofireSource = [
+    let imageSource = [
     ImageSource(image: UIImage(named: "319741263_676174654011613_1073944731900936552_n")!),
     ImageSource(image: UIImage(named: "319868516_3233707650226225_3437282427379472407_n")!),
     ImageSource(image: UIImage(named: "320554655_489907816606783_2074546054760606815_n")!)
+    ]
+    
+    let alamofireSource = [
+            AlamofireSource(urlString: "https://st3.depositphotos.com/1177973/12491/i/950/depositphotos_124917666-stock-photo-taxi-driver-near-car.jpg")!,
+            AlamofireSource(urlString: "https://www.ridester.com/wp-content/uploads/2021/09/uber_driver_requirements_1.jpg")!,
+            AlamofireSource(urlString: "https://d39raawggeifpx.cloudfront.net/styles/16_9_desktop/s3/articleimages/0717_Russia_tmt_yandex_taxi_car_adverts_CROPPED_0_2.png")!,
+            AlamofireSource(urlString: "https://www.ridester.com/wp-content/uploads/2018/07/long_distance_uber_2.jpg")!,
+            AlamofireSource(urlString: "https://www.ridester.com/wp-content/uploads/2021/07/loans_for_uber_drivers_2-1.jpg")!
     ]
     
     override func viewDidLoad() {
@@ -101,7 +111,6 @@ class HomeViewController: UIViewController, ImageSlideshowDelegate, UICollection
                fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
            }
     
-
     /*
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
