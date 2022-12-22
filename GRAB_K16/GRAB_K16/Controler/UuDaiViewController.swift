@@ -24,7 +24,7 @@ class UuDaiViewController: UIViewController {
         
         tblUuDai.register(UINib(nibName: "DSUuDaiTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
-        searchUuDai.delegate = self
+//        searchUuDai.delegate = self
         
         getUuDaiFromAPI()
     }
@@ -68,13 +68,13 @@ extension UuDaiViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension UuDaiViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        <#code#>
-    }
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        <#code#>
-    }
-}
+//extension UuDaiViewController: UISearchBarDelegate {
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        <#code#>
+//    }
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        <#code#>
+//    }
+//}
 
 

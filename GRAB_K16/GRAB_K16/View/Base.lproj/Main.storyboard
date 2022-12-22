@@ -111,7 +111,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ISV-sm-Xwb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ISV-sm-Xwb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1231"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAt-DK-o49">
@@ -122,15 +122,22 @@
                                                 <rect key="frame" x="0.0" y="201" width="414" height="163"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FEM-r0-8gR">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEM-r0-8gR">
                                                 <rect key="frame" x="0.0" y="364" width="414" height="415"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oCw-A7-Gut">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCw-A7-Gut">
                                                 <rect key="frame" x="0.0" y="779" width="414" height="452"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uoD-bM-dJw" firstAttribute="top" secondItem="ISV-sm-Xwb" secondAttribute="top" constant="201" id="14N-Lu-8tn"/>
+                                            <constraint firstItem="FEM-r0-8gR" firstAttribute="top" secondItem="ISV-sm-Xwb" secondAttribute="top" constant="364" id="2cM-zK-XGT"/>
+                                            <constraint firstAttribute="height" constant="1231" id="O4t-Am-RlH"/>
+                                            <constraint firstItem="FEM-r0-8gR" firstAttribute="top" secondItem="uoD-bM-dJw" secondAttribute="bottom" id="SPJ-st-SmW"/>
+                                            <constraint firstItem="oCw-A7-Gut" firstAttribute="top" secondItem="ISV-sm-Xwb" secondAttribute="top" constant="779" id="vhY-Qs-hX8"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -612,21 +619,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="FfP-dg-Le1"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="LbF-yV-3c1" id="Xmj-Xm-gSR"/>
                         <outlet property="searchUuDai" destination="fYp-IM-Lh2" id="qRE-aP-BCc"/>
                         <outlet property="tblUuDai" destination="tz8-BB-COX" id="1tP-xR-eXI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VB-pE-TnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="LbF-yV-3c1">
-                    <connections>
-                        <outlet property="delegate" destination="9eG-Jh-rD7" id="1YY-v0-b6y"/>
-                        <outlet property="searchBar" destination="fYp-IM-Lh2" id="Frv-s1-6wg"/>
-                        <outlet property="searchContentsController" destination="9eG-Jh-rD7" id="YOi-bC-Och"/>
-                        <outlet property="searchResultsDataSource" destination="9eG-Jh-rD7" id="Noa-dr-hbc"/>
-                        <outlet property="searchResultsDelegate" destination="9eG-Jh-rD7" id="5YU-pi-lbm"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2018.840579710145" y="809.59821428571422"/>
         </scene>
