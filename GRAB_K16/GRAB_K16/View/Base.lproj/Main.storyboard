@@ -663,16 +663,25 @@
                                     <outlet property="delegate" destination="PM2-hI-Q1L" id="qkO-SX-zZQ"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dc7-YA-obI">
+                                <rect key="frame" x="125" y="60" width="149" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.43434345419999998" green="0.43434345419999998" blue="0.43434345419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="wO4-Iz-ym4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="cltUuDaiView" destination="Bw0-VD-vwi" id="0gl-S9-SAV"/>
+                        <outlet property="lblNotification" destination="Dc7-YA-obI" id="NC8-gp-Jx3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Td-Uf-KmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5800" y="1285"/>
+            <point key="canvasLocation" x="5798.5507246376819" y="1284.7098214285713"/>
         </scene>
         <!--Slide Show View Controller-->
         <scene sceneID="cRI-dg-Oz8">
@@ -715,6 +724,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZvO-MU-oLJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>

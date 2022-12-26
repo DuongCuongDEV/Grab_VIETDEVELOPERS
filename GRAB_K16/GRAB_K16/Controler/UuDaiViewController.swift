@@ -17,6 +17,7 @@ class UuDaiViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     @IBOutlet weak var cltUuDaiView: UICollectionView!
     
+    @IBOutlet weak var lblNotification: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         getUuDaisFromAPI()
@@ -50,6 +51,11 @@ class UuDaiViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if(uudaisData.count == 0) {
+            lblNotification.text = "Chưa có ưu đãi nào"
+        } else {
+            lblNotification.text = ""
+        }
         return uudaisData.count
     }
 
