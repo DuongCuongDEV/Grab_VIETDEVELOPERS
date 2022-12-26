@@ -4,58 +4,78 @@
 //
 //  Created by chuottp on 12/12/2022.
 //
-
 import UIKit
-import ImageSlideshow
-import ImageSlideshowAlamofire
+import Kingfisher
 
-class HomeViewController: UIViewController, ImageSlideshowDelegate {
-    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
-              print("current page:", page)
-          }
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    var list = [
+        [
+            "images": "car 1",
+            "title": "Ôtô"
+        ],
+        [
+            "images": "motorbike 1",
+            "title": "Xe máy"
+        ],
+        [
+            "images": "motorbike 2",
+            "title": "Đồ ăn"
+        ],
+        [
+            "images": "package 1",
+            "title": "Giao hàng"
+        ],
+        [
+            "images": "tag 1",
+            "title": "Ưu đãi"
+        ]
+    ]
     
-    @IBOutlet weak var slideshow: ImageSlideshow!
-    let alamofireSource = [AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+    
+    @IBOutlet weak var cltItemView: UICollectionView!
+    
+   
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = cltItemView.dequeueReusableCell(withReuseIdentifier: "navBarCell", for: indexPath)
+        
+        let currentList = list[indexPath.row]
+        let lblTitle = cell.viewWithTag(2) as! UILabel
+        lblTitle.text = currentList["title"]
+        
+        let btnItem = cell.viewWithTag(1) as! UIButton
+        let image = UIImage(named: "\(currentList["images"]!)")
+        btnItem.setImage(image, for: .normal)
+        
+        
+        return cell
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slideshow.slideshowInterval = 2.0
-               slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
-               slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
-
-               let pageControl = UIPageControl()
-               pageControl.currentPageIndicatorTintColor = UIColor.red
-               pageControl.pageIndicatorTintColor = UIColor.lightGray
-               slideshow.pageIndicator = pageControl
-
-               // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
-               slideshow.activityIndicator = DefaultActivityIndicator()
-               slideshow.delegate = self
-
-               // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
-               slideshow.setImageInputs(alamofireSource)
-
-               let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
-               slideshow.addGestureRecognizer(recognizer)
-           }
-
-           @objc func didTap() {
-               let fullScreenController = slideshow.presentFullScreenController(from: self)
-               // set the activity indicator for full screen controller (skipping the line will show no activity indicator)
-               fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
-           }
+        cltItemView.delegate = self
+        cltItemView.dataSource = self
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let screenWith = UIScreen.main.bounds.width
+        layout.itemSize = CGSize(width: screenWith/5-10, height: 128)
+        cltItemView.collectionViewLayout = layout
+         
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
-
+   
 
 }
