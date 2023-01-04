@@ -21,7 +21,6 @@
 		61F26AD0294E306D00B11A08 /* ImageSlideshow/Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26ACF294E306D00B11A08 /* ImageSlideshow/Kingfisher */; };
 		61F26AD2294E306D00B11A08 /* ImageSlideshow/SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 61F26AD1294E306D00B11A08 /* ImageSlideshow/SDWebImage */; };
 		61F26AD4294E426B00B11A08 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AD3294E426B00B11A08 /* CustomTableViewCell.swift */; };
-		61F26AD6294E42C400B11A08 /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AD5294E42C400B11A08 /* TrafficViewController.swift */; };
 		61F26AD8294E42F300B11A08 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26AD7294E42F300B11A08 /* MapViewController.swift */; };
 		61F26ADC294E452A00B11A08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F26ADB294E452A00B11A08 /* HomeViewController.swift */; };
 		B0DDB861E1546EA3B2EB443B /* Pods_GRAB_K16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */; };
@@ -45,7 +44,6 @@
 		4397A6CE29474A16009A722C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4397A6D2294C9207009A722C /* EndDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndDestination.swift; sourceTree = "<group>"; };
 		61F26AD3294E426B00B11A08 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		61F26AD5294E42C400B11A08 /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
 		61F26AD7294E42F300B11A08 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		61F26ADB294E452A00B11A08 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63E8039C0239BDA9E85A569D /* Pods-GRAB_K16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRAB_K16.release.xcconfig"; path = "Target Support Files/Pods-GRAB_K16/Pods-GRAB_K16.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				61F26ADB294E452A00B11A08 /* HomeViewController.swift */,
 				FA76638B295217F500719156 /* Sign_UpViewController.swift */,
 				61F26AD3294E426B00B11A08 /* CustomTableViewCell.swift */,
-				61F26AD5294E42C400B11A08 /* TrafficViewController.swift */,
 				61F26AD7294E42F300B11A08 /* MapViewController.swift */,
 				4323B7BD2941013A005B8FBF /* ViewController.swift */,
 				4397A6D2294C9207009A722C /* EndDestination.swift */,
@@ -336,7 +333,6 @@
 				4397A6D3294C9207009A722C /* EndDestination.swift in Sources */,
 				61F26AD4294E426B00B11A08 /* CustomTableViewCell.swift in Sources */,
 				FA76638C295217F500719156 /* Sign_UpViewController.swift in Sources */,
-				61F26AD6294E42C400B11A08 /* TrafficViewController.swift in Sources */,
 				4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */,
 				4397A6CD294749DE009A722C /* LocationManager.swift in Sources */,
 				FA0DB05A295B1E88002FE2E1 /* StartCheckEmailViewController.swift in Sources */,
