@@ -11,10 +11,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>FloatingPanel.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>Pods-GRAB_K16.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-GRAB_K16.xcscheme_^#shared#^_</key>
+		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
