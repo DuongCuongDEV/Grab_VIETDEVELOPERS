@@ -35,6 +35,11 @@
 		9B6DA63429507BA700BEF8A5 /* DSXeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6DA63229507BA700BEF8A5 /* DSXeTableViewCell.xib */; };
 		9B6DA63629507BDA00BEF8A5 /* DanhSachXeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DA63529507BDA00BEF8A5 /* DanhSachXeViewController.swift */; };
 		B0DDB861E1546EA3B2EB443B /* Pods_GRAB_K16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */; };
+		FA0DB05A295B1E88002FE2E1 /* StartCheckEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DB059295B1E88002FE2E1 /* StartCheckEmailViewController.swift */; };
+		FA1C75DD2956163200038870 /* Sign_UpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C75DC2956163200038870 /* Sign_UpModel.swift */; };
+		FA1C75DF2956166400038870 /* APIGrab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C75DE2956166400038870 /* APIGrab.swift */; };
+		FA6767B1295A0E3900A6C2B5 /* StartSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6767B0295A0E3900A6C2B5 /* StartSignUpViewController.swift */; };
+		FA76638C295217F500719156 /* Sign_UpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76638B295217F500719156 /* Sign_UpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +71,11 @@
 		9B6DA63229507BA700BEF8A5 /* DSXeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSXeTableViewCell.xib; sourceTree = "<group>"; };
 		9B6DA63529507BDA00BEF8A5 /* DanhSachXeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhSachXeViewController.swift; sourceTree = "<group>"; };
 		CE6B273D7094803453628469 /* Pods_GRAB_K16.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRAB_K16.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0DB059295B1E88002FE2E1 /* StartCheckEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCheckEmailViewController.swift; sourceTree = "<group>"; };
+		FA1C75DC2956163200038870 /* Sign_UpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign_UpModel.swift; sourceTree = "<group>"; };
+		FA1C75DE2956166400038870 /* APIGrab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGrab.swift; sourceTree = "<group>"; };
+		FA6767B0295A0E3900A6C2B5 /* StartSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartSignUpViewController.swift; path = ../StartSignUpViewController.swift; sourceTree = "<group>"; };
+		FA76638B295217F500719156 /* Sign_UpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign_UpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +151,14 @@
 			children = (
 				9B3621612951C22900027265 /* DatChuyen */,
 				61F26ADB294E452A00B11A08 /* HomeViewController.swift */,
+				9B3621752951ED4200027265 /* UuDaiViewController.swift */,
+				9B3621772951F12D00027265 /* ChiTietUuDaiViewController.swift */,
+				FA76638B295217F500719156 /* Sign_UpViewController.swift */,
 				61F26AD7294E42F300B11A08 /* MapViewController.swift */,
 				4323B7BD2941013A005B8FBF /* ViewController.swift */,
 				4397A6D2294C9207009A722C /* EndDestination.swift */,
-				9B3621752951ED4200027265 /* UuDaiViewController.swift */,
-				9B3621772951F12D00027265 /* ChiTietUuDaiViewController.swift */,
+				FA6767B0295A0E3900A6C2B5 /* StartSignUpViewController.swift */,
+				FA0DB059295B1E88002FE2E1 /* StartCheckEmailViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -208,6 +221,8 @@
 			children = (
 				9B36216A2951C64500027265 /* API ưu đãi */,
 				9B3621692951C63500027265 /* API danh sach xe */,
+				FA1C75DC2956163200038870 /* Sign_UpModel.swift */,
+				FA1C75DE2956166400038870 /* APIGrab.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -389,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1C75DF2956166400038870 /* APIGrab.swift in Sources */,
 				61F26AD8294E42F300B11A08 /* MapViewController.swift in Sources */,
 				4397A6D3294C9207009A722C /* EndDestination.swift in Sources */,
 				9B36216F2951C75C00027265 /* APIUuDai.swift in Sources */,
@@ -400,13 +416,19 @@
 				4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */,
 				4397A6CD294749DE009A722C /* LocationManager.swift in Sources */,
 				9B6DA63329507BA700BEF8A5 /* DSXeTableViewCell.swift in Sources */,
+				FA76638C295217F500719156 /* Sign_UpViewController.swift in Sources */,
+				4397A6CF29474A16009A722C /* SearchViewController.swift in Sources */,
+				4397A6CD294749DE009A722C /* LocationManager.swift in Sources */,
+				FA0DB05A295B1E88002FE2E1 /* StartCheckEmailViewController.swift in Sources */,
 				4323B7BE2941013A005B8FBF /* ViewController.swift in Sources */,
 				9B3621762951ED4200027265 /* UuDaiViewController.swift in Sources */,
 				9B6DA62E29506EC800BEF8A5 /* bookCarModel.swift in Sources */,
 				61F26ADC294E452A00B11A08 /* HomeViewController.swift in Sources */,
 				4323B7BA2941013A005B8FBF /* AppDelegate.swift in Sources */,
 				9B3621782951F12D00027265 /* ChiTietUuDaiViewController.swift in Sources */,
+				FA6767B1295A0E3900A6C2B5 /* StartSignUpViewController.swift in Sources */,
 				4323B7BC2941013A005B8FBF /* SceneDelegate.swift in Sources */,
+				FA1C75DD2956163200038870 /* Sign_UpModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

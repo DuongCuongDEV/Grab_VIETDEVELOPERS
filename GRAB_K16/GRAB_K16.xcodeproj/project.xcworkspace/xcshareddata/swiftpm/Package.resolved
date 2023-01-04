@@ -5,8 +5,26 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire.git",
       "state" : {
+        "revision" : "78424be314842833c04bc3bef5b72e85fff99204",
+        "version" : "5.6.4"
+      }
+    },
+    {
+      "identity" : "alamofireimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/AlamofireImage.git",
+      "state" : {
+        "revision" : "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "imageslideshow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zvonicek/ImageSlideshow.git",
+      "state" : {
         "branch" : "master",
-        "revision" : "ce7f662709a152e840b130a158b9afef3402e146"
+        "revision" : "9a5900104a2c9a5bde32dabb35b07da30ee7bc0e"
       }
     },
     {
@@ -14,8 +32,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "3e091ee962391a2ddcae5b18e17bc625f9d88d6e"
+        "revision" : "1a0c2df04b31ed7aa318354f3583faea24f006fc",
+        "version" : "5.15.8"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "3312bf5e67b52fbce7c3caf431b0cda721a9f7bb",
+        "version" : "5.14.2"
       }
     }
   ],
